@@ -1,4 +1,4 @@
-const productRepo = require("../repositories/product-repo");
+const albumRepo = require("../repositories/album-repo");
 
 class AlbumService {
     constructor() {
@@ -7,27 +7,27 @@ class AlbumService {
     }
    
     add(album) {
-      return album-repo.save(album);
+      return albumRepo.save(album);
     }
 
     getAll() {
-        return album-repo.findAll();
+        return albumRepo.findAll();
       }
    
       getById(id) {
-        return album-repo.findOne(id);
+        return albumRepo.findOne(id);
       }
    
       getByName(nome) {
-        return album-repo.findByName(nome);
+        return albumRepo.findByName(nome);
       }
     
       update(id, album) {
-        return album-repo.update(id, album);
+        return albumRepo.update(id, album);
       }
    
       delete(id) {
-        return album-repo.delete(id);
+        return albumRepo.delete(id);
       }
   }
    

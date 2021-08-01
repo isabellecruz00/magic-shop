@@ -3,7 +3,7 @@ const pool = require("../dbs/postgres");
 exports.save = async (album) => {
     const result = await pool.query(
       "INSERT INTO Album(nome, descricao, preco) VALUES ($1,$2,$3) RETURNING *;",
-      [album.name, album.descricao, album.price]
+      [album.nome, album.descricao, album.preco]
     );
     return result.rows[0];
   };
